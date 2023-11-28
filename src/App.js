@@ -4,7 +4,7 @@ import './App.css';
 //hook para makuha ang data na gikan sa users na naka object sulod sa FakeData.js
 import { useSelector, useDispatch } from 'react-redux';
 //ad ug bag-ong user / updateUser / deleteUser
-import { addUser, deleteUser } from './features/Users';
+import { addUser, updateUsername, deleteUser } from './features/Users';
 //add useStateHook
 import { useState } from 'react';
 
@@ -14,6 +14,9 @@ function App() {
   //kuhaon ang value sa name ug username gamit onchange!
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
+
+  //for update
+  const [newUsername, setNewUsername] = useState("");
 
   const dispatch = useDispatch();
 
@@ -27,7 +30,7 @@ function App() {
     <h1>RDX</h1>
       <div className='addUser'>
         <input type="text" 
-          onChange={(x) => {setName(x.target.value)}}
+          onChange={(x) => {setUsername(x.target.value)}}
           placeholder='Name...' />
         <input type="text" 
           onChange={(e) => {setUsername(e.target.value)}} 
@@ -42,9 +45,15 @@ function App() {
               <h1>{user.name}</h1>
               <h1>{user.username}</h1>
               <input type="text" 
-                onChange={(w) => {setName(w.target.value)}} 
+                onChange={(w) => {setNewUsername(w.target.value)}} 
                 placeholder='New username' />
-                <button>Update Username</button>
+                <button 
+                onClick={() => { dispatch(updateUsername({ id: user.id, username: newUsername})
+                ); 
+              }}
+              >
+              Update Username
+              </button>
                 <button
                 onClick={() => { dispatch(deleteUser({ id: user.id})) }}
                 >Delete User</button>
