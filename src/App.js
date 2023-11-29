@@ -29,19 +29,21 @@ function App() {
 
   return (
     <div className="App">
-      <h1>RDX</h1>
+      <h1>REDUX STATE MANAGEMENT | CRUD</h1>
       <div className='addUser'>
         <input
+          className='designGamay1'
           type="text"
           onChange={(e) => setName(e.target.value)}
           placeholder='Name...'
         />
         <input
+          className='designGamay2'
           type="text"
           onChange={(e) => setUsername(e.target.value)}
           placeholder='Username...'
         />
-        <button onClick={handleAddUser}>Add User</button>
+        <button  className='buttonGamay' onClick={handleAddUser}>Add User</button>
       </div>
 
       <div className='displayUsers'>
@@ -49,17 +51,21 @@ function App() {
           <div key={user.id}>
             <h1>{user.name}</h1>
             <h1>{user.username}</h1>
+      
+           <br />
             <input
-              type="text"
-              onChange={(e) => setNewUsername(e.target.value)}
-              placeholder='New username'
-            />
-            <button onClick={() => dispatch(updateUsername({ id: user.id, username: newUsername }))}>
-              Update Username
-            </button>
-            <button onClick={() => dispatch(deleteUser({ id: user.id }))}>
-              Delete User
-            </button>
+            type="text"
+            className='designGamay3'
+            onChange={(e) => setNewUsername(e.target.value)}
+            placeholder='New username'
+          />
+          <button  className='buttonGamay3' onClick={() => dispatch(updateUsername({ id: user.id, username: newUsername }))}>
+            Update Username
+          </button>
+          <button className='buttonGamay1' onClick={() => dispatch(deleteUser({ id: user.id }))}>
+            Delete User
+          </button>
+          
           </div>
         ))}
       </div>
