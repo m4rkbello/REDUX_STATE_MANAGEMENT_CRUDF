@@ -1,3 +1,8 @@
+
+body{
+  background-color: tan;
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -10,12 +15,71 @@
 }
 
 .displayUsers div {
-  background-color: bisque;
+  background-color: sandybrown;
   width: 400px;
-  height: 150px;
+  height: 300px;
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
+
+.displayUsers div {
+  background-color: sandybrown;
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  position: relative;
+}
+
+.designGamay1 {
+  height: 30px;
+  width: auto;
+  background-color:bisque;
+  border-radius: 10px;
+  margin: 10px;
+}
+.designGamay2 {
+  height: 30px;
+  width: auto;
+  background-color:bisque;
+  border-radius: 10px;
+  margin: 10px;
+}
+.buttonGamay {
+  height: 36px;
+  width: 110px;
+  background-color:burlywood;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.buttonGamay1 {
+  height: 36px;
+  /* width: 110px; */
+  background-color:burlywood;
+  /* margin: 10px; */
+  border-radius: 30px;
+}
+
+.designGamay3 {
+  height: 30px;
+  /* width: auto; */
+  background-color:bisque;
+  border-radius: 10px;
+  /* margin: 10px; */
+}
+
+.buttonGamay3 {
+  height: 36px;
+  /* width: 110px; */
+  background-color:burlywood;
+  /* margin: 10px; */
+  border-radius: 30px;
+}
+
